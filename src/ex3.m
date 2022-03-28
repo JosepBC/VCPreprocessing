@@ -60,9 +60,9 @@ function norm = normalize(src, dst_image, dst_histogram)
     norm = norm * 255;
     norm = uint8(norm);
 
-    %figure, imshow(norm);
+    figure, imshow(norm);
     imwrite(norm, dst_image);
-    %save_histogram(norm, dst_histogram);
+    save_histogram(norm, dst_histogram);
 end
 
 function save_histogram(src, dst_path)
