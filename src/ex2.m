@@ -99,16 +99,16 @@ gaussian_filter(dst6, '../dst_img/ex2/filtered_salt_pepper/gaussian/d95a06_11x11
 % Noise foos
 function dst = add_gaussian_noise(src, dst_path, var_gauss)
     dst = imnoise(src, 'gaussian', 0, var_gauss);
-    % imwrite(dst, dst_path);
-    %figure, imshow(dst);
-    %title(var_gauss)
+    imwrite(dst, dst_path);
+    figure, imshow(dst);
+    title(var_gauss)
 end
 
 function dst = add_salt_pepper_noise(src, dst_path, density)
     dst = imnoise(src, 'salt & pepper', density);
     imwrite(dst, dst_path);
-    %figure, imshow(dst);
-    %title(density)
+    figure, imshow(dst);
+    title(density)
 end
 
 % Filters
